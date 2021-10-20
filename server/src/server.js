@@ -1,12 +1,22 @@
-// import express from 'express';
+require('dotenv').config()
+// TODO configure and write dotenv
 const express = require('express');
-// CURRENT working on using es6 with node
-
-
 const app = express();
 
-const port = 3001;
-// TODO env
+const logger = require('morgan');
+app.use(logger('dev'));  // development middleware
+
+const path = require('path'); 
+// TODO set up path and routes
+const port = process.env.PORT || '3001';
+const router = require('./routes/index');
+
+
+app.use(express.static(path.join(__dirname, 'public')));
+// TODO link to client app
+app.use(express.json()); // allows json to be consumed and created
+
+app.use('/', router);
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
@@ -14,5 +24,5 @@ app.get('/', (req, res) => {
 
 
 app.listen(port, () =>
-  console.log(`app running on port {port}`),
+  console.log(`Example app listening at http://localhost:${port}`),
 );
