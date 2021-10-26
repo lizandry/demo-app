@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import LoginButton from './Components/Auth0/LoginButton'
-import LogoutButton from './Components/Auth0/LogoutButton'
+import LoginButton from './components/Auth0/LoginButton'
+import LogoutButton from './components/Auth0/LogoutButton'
 
 function App() {
   return (
