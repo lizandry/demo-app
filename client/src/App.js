@@ -9,7 +9,8 @@ import './App.css';
 
 import NavBar from "./components/NavBar";
 import Loading from './components/auth0/Loading'
-// import { Home, Profile, ExternalApi } from "./views";
+import Profile from "./views/Profile";
+import ProtectedRoute from './auth/protected-route';
 // import ProtectedRoute from "./auth/protected-route";
 
 // import LoginButton from './components/auth0/LoginButton'
@@ -28,13 +29,13 @@ function App() {
     </div>
   );
 }
-      // <div className="container flex-grow-1">
-      //   <Switch>
-      //     {/* {/* <Route path="/" exact component={Home} /> */}
-      //     <Route path="/profile" component={Profile} />
-      //     <Route path="/external-api" component={ExternalApi} /> */}
-      //   </Switch>
-      // </div>
+      <div className="container flex-grow-1">
+        <Switch>
+          {/* {/* <Route path="/" exact component={Home} /> */}
+          <ProtectedRoute path="/profile" component={Profile} />
+          {/* <Route path="/external-api" component={ExternalApi} />  */}
+        </Switch>
+      </div>
       // <Footer />
 
 export default App;
