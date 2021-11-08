@@ -9,7 +9,9 @@ import './App.css';
 
 import NavBar from "./components/NavBar";
 import Loading from './components/auth0/Loading'
-import Profile from "./views/Profile";
+import Profile from "./views/profile";
+// import Home from "./views/home";
+import ExternalApi from "./views/external-api";
 import ProtectedRoute from './auth/protected-route';
 // import ProtectedRoute from "./auth/protected-route";
 
@@ -31,9 +33,9 @@ function App() {
 }
       <div className="container flex-grow-1">
         <Switch>
-          {/* {/* <Route path="/" exact component={Home} /> */}
+          {/* <Route path="/" exact component={Home} /> */}
           <ProtectedRoute path="/profile" component={Profile} />
-          {/* <Route path="/external-api" component={ExternalApi} />  */}
+          <Route path="/external-api" component={ExternalApi} /> 
         </Switch>
       </div>
       // <Footer />
