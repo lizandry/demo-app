@@ -7,10 +7,10 @@ import './App.css';
 
 // import { Route, Switch } from "react-router-dom";
 
+
 import NavBar from "./components/NavBar";
 import Loading from './components/auth0/Loading'
-import Profile from "./views/profile";
-// import Home from "./views/home";
+import Profile from "./views/Profile";
 import ExternalApi from "./views/external-api";
 import ProtectedRoute from './auth/protected-route';
 // import ProtectedRoute from "./auth/protected-route";

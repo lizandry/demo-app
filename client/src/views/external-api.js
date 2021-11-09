@@ -9,6 +9,7 @@ const ExternalApi = () => {
 
   const callApi = async () => {
     try {
+      // const response = await fetch(`${serverUrl}/api/messages/public-message`);
       const response = await fetch(`${serverUrl}/api/messages/public-message`);
 
       const responseData = await response.json();
